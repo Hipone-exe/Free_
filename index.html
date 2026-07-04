@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris - T-spin対応</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="left-panel">
+      <div class="panel-box">
+        <div class="panel-label">HOLD</div>
+        <canvas id="hold-canvas" width="120" height="120"></canvas>
+      </div>
+      <div class="panel-box score-box">
+        <div class="panel-label">SCORE</div>
+        <div id="score">0</div>
+        <div class="panel-label">BEST</div>
+        <div id="best-score">0</div>
+      </div>
+      <div class="panel-box">
+        <div class="panel-label">LEVEL</div>
+        <div id="level">1</div>
+        <div class="panel-label">LINES</div>
+        <div id="lines">0</div>
+      </div>
+      <div class="panel-box controls-box">
+        <div class="panel-label">CONTROLS</div>
+        <div class="ctrl-row"><span>←/→</span><span>Move</span></div>
+        <div class="ctrl-row"><span>↓</span><span>Soft Drop</span></div>
+        <div class="ctrl-row"><span>Space</span><span>Hard Drop</span></div>
+        <div class="ctrl-row"><span>↑ / X</span><span>Rotate CW</span></div>
+        <div class="ctrl-row"><span>Z / Ctrl</span><span>Rotate CCW</span></div>
+        <div class="ctrl-row"><span>A</span><span>Rotate 180°</span></div>
+        <div class="ctrl-row"><span>C / Shift</span><span>Hold</span></div>
+        <div class="ctrl-row"><span>P / Esc</span><span>Pause</span></div>
+      </div>
+    </div>
+
+    <div id="game-area">
+      <canvas id="board-canvas" width="300" height="600"></canvas>
+      <div id="overlay" class="hidden">
+        <div id="overlay-content">
+          <div id="overlay-title"></div>
+          <div id="overlay-sub"></div>
+          <button id="overlay-btn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="right-panel">
+      <div class="panel-box">
+        <div class="panel-label">NEXT</div>
+        <canvas id="next-canvas" width="120" height="540"></canvas>
+      </div>
+      <div class="panel-box">
+        <div class="panel-label">COMBO</div>
+        <div id="combo">-</div>
+        <div class="panel-label">B2B</div>
+        <div id="b2b">-</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="action-display"></div>
+
+  <script src="js/tetris.js"></script>
+</body>
+</html>
